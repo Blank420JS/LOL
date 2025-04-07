@@ -1,0 +1,93 @@
+/* Basis-Design für hellen und dunklen Modus */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --box: #f1f1f1;
+  --input-bg: #ffffff;
+  --button-bg: #0077ff;
+  --button-hover: #005ec2;
+  --border: #ccc;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --box: #1e1e1e;
+  --input-bg: #2a2a2a;
+  --button-bg: #0099ff;
+  --button-hover: #0077cc;
+  --border: #444;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container-Zentrale Box */
+.container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: var(--box);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+/* Input-Felder */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text);
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--button-bg);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Link-Styling */
+a {
+  color: var(--button-bg);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode Toggle */
+.dark-toggle {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid var(--text);
+  color: var(--text);
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+}
